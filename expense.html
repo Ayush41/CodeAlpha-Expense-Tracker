@@ -5,9 +5,48 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Expense Tracker</title>
     <link rel="stylesheet" href="expense.css">
-    <script src="expense.js"></script>
 </head>
 <body>
     <h1>Expense Tracker</h1>
+    <div class="input-section">
+        <label for="category-select">Category:</label>
+        <select id="category-select">
+            <option value="Grosery">Grosery</option>
+            <option value="College Fees">College Fees</option>
+            <option value="Vacation">Vacation</option>
+            <option value="Rent">Rent</option>
+        </select>
+        <label for="amount-input">Amount:</label>
+        <input type="number" id="amount-input">
+        <label for="date-input">Date:</label>
+        <input type="date" id="date-input">
+        <button id="add-btn">Add</button>
+    </div>
+    <div class="expense-list">
+        <h2>List of Expenses</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Category</th>
+                    <th>Amount</th>
+                    <th>Date</th>
+                    <th>Delete</th>
+                </tr>
+            </thead>
+            <tbody id="expenses-table-body">
+
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td>Total Amount: </td>
+                    <td id="total-amount"></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </tfoot>
+        </table>
+        <!-- <button class="delete-btn">Delete</button> -->
+    </div>
+    <script src="expense.js"></script>
 </body>
 </html>
